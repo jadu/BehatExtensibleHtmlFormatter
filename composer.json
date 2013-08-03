@@ -1,0 +1,21 @@
+{
+    "name": "zodyac/behat-extensible-html-formatter",
+    "type": "behat-extension",
+    "description": "Extensible HTML formatter for Behat",
+    "keywords": ["bdd", "behat", "formatter"],
+    "homepage": "http://jadu.github.io",
+    "license": "NCSA",
+    "authors": [
+        {
+            "name": "Tom Graham",
+            "email": "tom.graham@jadu.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "behat/behat": "~2.4.6"
+    },
+    "autoload": {
+        "psr-0": { "Zodyac\\Behat\\ExtensibleHtmlFormatter": "src/" }
+    }
+}
