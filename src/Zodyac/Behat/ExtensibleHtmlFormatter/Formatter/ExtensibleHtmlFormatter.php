@@ -91,8 +91,7 @@ class ExtensibleHtmlFormatter extends BaseHtmlFormatter
             $this->printStepArguments($step->getArguments(), $color);
         }
 
-        if (null !== $exception &&
-            (!$exception instanceof UndefinedException || null === $snippet)) {
+        if (null !== $exception && (!$exception instanceof UndefinedException || null === $snippet)) {
             $this->printStepException($exception, $color);
         }
 
@@ -100,7 +99,7 @@ class ExtensibleHtmlFormatter extends BaseHtmlFormatter
             $this->printStepSnippet($snippet);
         }
 
-        $this->dispatcher->dispatch('formatter.html.step', new FormatterStepEvent($this->getWritingConsole(), $step, $definition));
+        $this->dispatcher->dispatch('formatter.html.step', new FormatterStepEvent($this->getWritingConsole(), $step, $result, $definition, $exception));
 
         $this->writeln('</li>');
     }
